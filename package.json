@@ -1,0 +1,25 @@
+{
+    "type": "module",
+    "scripts": {
+        "dev": "tsx src/index.ts",
+        "start": "node dist/src/index.js",
+        "build": "tsc",
+        "lint": "eslint -c .eslintrc.json \"**/*.ts\""
+    },
+    "devDependencies": {
+        "@types/node": "^20.11.17",
+        "@typescript-eslint/eslint-plugin": "^6.21.0",
+        "@typescript-eslint/parser": "^6.21.0",
+        "eslint": "^8.56.0",
+        "typescript": "^5.3.3"
+    },
+    "dependencies": {
+        "@discordjs/rest": "^2.2.0",
+        "@google/generative-ai": "^0.2.0",
+        "discord.js": "^14.14.1",
+        "mongodb": "^6.3.0"
+    },
+    "optionalDependencies": {
+        "tsx": "^4.7.1"
+    }
+}
