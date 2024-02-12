@@ -5,16 +5,19 @@ import type { Message } from "discord.js";
 
 const {GeminiKey} = untypedConfig as Config;
 
-
 const gemini = new GoogleGenerativeAI(GeminiKey).getGenerativeModel({model:"gemini-pro"});
 
-const prompt = "Your goal is to help users with tech issues from within Discord channel. When not supplied enough info, ask the user for more as needed. Use Discord flavored markdown when possible. You should try to include links to support articles when it would benefit the user. The user's input is as follows: "
+const prompt =
+`You are a bot in a Discord channel where users ask for help with tech support issues. You cannot read message history or view images, and the user must contain all 
+relevant info within one message because of this. If the user provides insufficient information, ask them to send a new message with more information, but provide generic assistance.
+The user and their input is as follows:`
 
 export async function geminiGenerate(message:Message){
     const geminiInput = `${prompt} User ${message.author.displayName} says: ${message.content}`
     await gemini.generateContent(geminiInput).then(async (output)=>{
         await message.reply({content:output.response.text()})
     }).catch(async (err)=>{
+        console.error(err)
         await message.reply({content:`Sorry, I had an issue! \`\`\`${err}\`\`\``})
     })
 }

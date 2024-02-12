@@ -7,7 +7,7 @@ import type { Config } from "../types/config.js";
 const {ChannelIDLock} = untypedConfig as Config;
 
 export async function handleMessage(message:Message){
-    if(message.author.bot || !message.inGuild() || message.channelId!=ChannelIDLock){
+    if(!message.inGuild() || message.channelId!=ChannelIDLock){
         return;
     }
     await geminiGenerate(message)

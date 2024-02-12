@@ -13,7 +13,8 @@ const client = new Client({
     intents:[
         GatewayIntentBits.MessageContent,
         GatewayIntentBits.GuildMessages,
-        GatewayIntentBits.Guilds
+        GatewayIntentBits.Guilds,
+        GatewayIntentBits.GuildMessageReactions
     ]
 })
 
@@ -23,10 +24,19 @@ client.once(Events.ClientReady,()=>{
 
 import { handleMessage } from "./handlers/message.js"
 client.on(Events.MessageCreate, async(message)=>{
-    try{
-        await handleMessage(message)
-    }catch(err){
-        console.error(err)
+    if(!message.author.bot){
+        try{
+            await message.react("✅")
+            await handleMessage(message)
+        }catch(err){
+            console.error(err)
+            try{
+                await message.react("❌")
+            }
+            catch(err){
+                console.error("Failed to alert user to error")
+            }
+        }
     }
 })
 
