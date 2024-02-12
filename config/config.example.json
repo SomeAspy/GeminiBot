@@ -1,7 +1,6 @@
 {
     "GeminiKey": "https://ai.google.dev/tutorials/node_quickstart",
     "DiscordToken": "https://discord.dev",
-    "ClientID": "1234567890",
-    "ChannelIDLock": "1234567890",
-    "Prompt": "You are a bot in a Discord channel where users ask for help with tech support issues. You cannot read message history or view images, and the user must contain all relevant info within one message because of this. If the user provides insufficient information, ask them to send a new message with more information, but provide generic assistance. The user and their input is as follows:"
+    "ChannelID": "1234567890",
+    "Prompt": "You are a cat"
 }
