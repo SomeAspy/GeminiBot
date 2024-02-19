@@ -9,8 +9,8 @@ dependencies:
     specifier: ^2.2.0
     version: 2.2.0
   '@google/generative-ai':
-    specifier: ^0.2.0
-    version: 0.2.0
+    specifier: ^0.2.1
+    version: 0.2.1
   discord.js:
     specifier: ^14.14.1
     version: 14.14.1
@@ -364,8 +364,8 @@ packages:
     engines: {node: '>=14'}
     dev: false
 
-  /@google/generative-ai@0.2.0:
-    resolution: {integrity: sha512-ivlJS7H/9YY1CMrGmcSXm7CRGDept5uvamIEZwHrInX0lA4K55U2YEjQyhRV+M0wgYix6EezEVCJzSdvxeZEkA==}
+  /@google/generative-ai@0.2.1:
+    resolution: {integrity: sha512-gNmMFadfwi7qf/6M9gImgyGJXY1jKQ/de8vGOqgJ0PPYgQ7WwzZDavbKrIuXS2zdqZZaYtxW3EFN6aG9x5wtFw==}
     engines: {node: '>=18.0.0'}
     dev: false
 
