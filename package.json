@@ -7,17 +7,17 @@
         "lint": "eslint -c .eslintrc.json \"**/*.ts\""
     },
     "devDependencies": {
-        "@types/node": "^20.11.19",
-        "@typescript-eslint/eslint-plugin": "^7.0.2",
-        "@typescript-eslint/parser": "^7.0.2",
-        "eslint": "^8.56.0",
+        "@types/node": "^20.11.24",
+        "@typescript-eslint/eslint-plugin": "^7.1.0",
+        "@typescript-eslint/parser": "^7.1.0",
+        "eslint": "^8.57.0",
         "typescript": "^5.3.3"
     },
     "dependencies": {
         "@discordjs/rest": "^2.2.0",
         "@google/generative-ai": "^0.2.1",
         "discord.js": "^14.14.1",
-        "mongodb": "^6.3.0"
+        "mongodb": "^6.4.0"
     },
     "optionalDependencies": {
         "tsx": "^4.7.1"
