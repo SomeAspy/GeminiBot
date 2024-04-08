@@ -15,7 +15,7 @@
     },
     "dependencies": {
         "@discordjs/rest": "^2.2.0",
-        "@google/generative-ai": "^0.3.1",
+        "@google/generative-ai": "^0.5.0",
         "discord.js": "^14.14.1"
     },
     "optionalDependencies": {
