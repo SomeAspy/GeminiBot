@@ -19,6 +19,6 @@
         "discord.js": "^14.14.1"
     },
     "optionalDependencies": {
-        "tsx": "^4.7.1"
+        "tsx": "^4.7.2"
     }
 }
