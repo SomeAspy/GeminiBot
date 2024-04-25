@@ -7,19 +7,19 @@
         "lint": "eslint \"**/*.ts\" ."
     },
     "devDependencies": {
-        "@eslint/js": "^9.0.0",
+        "@eslint/js": "^9.1.1",
         "@types/eslint__js": "^8.42.3",
         "@types/node": "^20.12.7",
-        "eslint": "^9.0.0",
+        "eslint": "^9.1.1",
         "typescript": "^5.4.5",
-        "typescript-eslint": "^7.6.0"
+        "typescript-eslint": "^7.7.1"
     },
     "dependencies": {
         "@discordjs/rest": "^2.2.0",
-        "@google/generative-ai": "^0.6.0",
+        "@google/generative-ai": "^0.8.0",
         "discord.js": "^14.14.1"
     },
     "optionalDependencies": {
-        "tsx": "^4.7.2"
+        "tsx": "^4.7.3"
     }
 }
