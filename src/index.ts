@@ -23,29 +23,31 @@ client.once(Events.ClientReady,()=>{
 })
 
 import { handleMessage } from "./handlers/message.js"
-client.on(Events.MessageCreate, async(message)=>{
+client.on(Events.MessageCreate, (message)=>{
     if(!message.author.bot){
-        try{
-            await message.react("✅")
-            await handleMessage(message)
-        }catch(err){
-            console.error(err)
+        (async () =>{
             try{
-                await message.react("❌")
+                await message.react("✅")
+                await handleMessage(message)
+            }catch(err){
+                console.error(err)
+                try{
+                    await message.react("❌")
+                }
+                catch(err){
+                    console.error("Failed to alert user to error")
+                }
             }
-            catch(err){
-                console.error("Failed to alert user to error")
-            }
-        }
+        })
     }
 })
 
-client.on(Events.Error, (error) => console.error(error));
-client.on(Events.Warn, (warning) => console.warn(warning));
+client.on(Events.Error, (error) => {console.error(error)});
+client.on(Events.Warn, (warning) => {console.warn(warning)});
 
-client.on(Events.Invalidated, async () => {
+client.on(Events.Invalidated, () => {
     console.log("Session Invalidated - Stopping Client");
-    await client.destroy();
+    async () => {await client.destroy()};
     process.exit(1);
 });
 

@@ -11,8 +11,8 @@ export async function geminiGenerate(message:Message){
     const geminiInput = `${Prompt} User ${message.author.displayName} says: ${message.content}`
     await gemini.generateContent(geminiInput).then(async (output)=>{
         await message.reply({content:output.response.text()})
-    }).catch(async (err)=>{
+    }).catch(async (err:unknown)=>{
         console.error(err)
-        await message.reply({content:`Sorry, I had an issue! \`\`\`${err}\`\`\``})
+        await message.reply({content:`Sorry, I had an issue! \`\`\`${err as string}\`\`\``})
     })
 }
