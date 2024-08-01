@@ -12,8 +12,8 @@ importers:
         specifier: ^2.3.0
         version: 2.3.0
       '@google/generative-ai':
-        specifier: ^0.14.1
-        version: 0.14.1
+        specifier: ^0.16.0
+        version: 0.16.0
       discord.js:
         specifier: ^14.15.3
         version: 14.15.3
@@ -235,8 +235,8 @@ packages:
     resolution: {integrity: sha512-BsWiH1yFGjXXS2yvrf5LyuoSIIbPrGUWob917o+BTKuZ7qJdxX8aJLRxs1fS9n6r7vESrq1OUqb68dANcFXuQQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@google/generative-ai@0.14.1':
-    resolution: {integrity: sha512-pevEyZCb0Oc+dYNlSberW8oZBm4ofeTD5wN01TowQMhTwdAbGAnJMtQzoklh6Blq2AKsx8Ox6FWa44KioZLZiA==}
+  '@google/generative-ai@0.16.0':
+    resolution: {integrity: sha512-doB5ZNxS6m+jUZqaLCeYXfBZCdq6Ho0ibkq5/17xe1qAUZpCLWlvCDGtqFPqqO+yezNmvGatS0KhV22yiOT3DA==}
     engines: {node: '>=18.0.0'}
 
   '@humanwhocodes/module-importer@1.0.1':
@@ -955,7 +955,7 @@ snapshots:
 
   '@eslint/object-schema@2.1.4': {}
 
-  '@google/generative-ai@0.14.1': {}
+  '@google/generative-ai@0.16.0': {}
 
   '@humanwhocodes/module-importer@1.0.1': {}
 
